@@ -5,6 +5,8 @@
 		</header>
 		<Search class="searchCon"></Search>
 		<MenuCarousel class="MenuCarousel"></MenuCarousel>
+		<Banner></Banner>
+		<div id="shoplist-title" class="shoplist-title">推荐商家</div>
 		</div>
 	</div>
 </template>
@@ -12,8 +14,9 @@
 	import ReservationAddress from "@/components/ReservationAddress"
 	import Search from "@/components/Search"
 	import MenuCarousel from "@/components/MenuCarousel"
+	import Banner from "@/components/Banner"
 	export default {
-		components: {ReservationAddress,Search,MenuCarousel}
+		components: {ReservationAddress,Search,MenuCarousel,Banner}
 	}
 </script>
 <style scoped>
@@ -28,5 +31,30 @@
 		height: 47.2vw;
 	    background-color: #fff;
 	    text-align: center;
+	}
+	.shoplist-title{
+		height: 9.6vw;
+		font-size: 30px;
+		color: #000;
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+	.shoplist-title:after, .shoplist-title:before {
+	    display: block;
+	    content: "";
+	    width: .533333rem;
+	    width: 5.333333vw;
+	    height: .026667rem;
+	    height: .266667vw;
+	    background-color: #999;
+	}
+	.shoplist-title:after {
+	    margin-left: .346667rem;
+	    margin-left: 3.466667vw;
+	}
+	.shoplist-title:before {
+	    margin-right: .346667rem;
+	    margin-right: 3.466667vw;
 	}
 </style>

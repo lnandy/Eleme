@@ -1,15 +1,26 @@
 export function getLocation(param){
 	return new Promise((resolve,reject) => {
-		var request = new XMLHttpRequest();
-		request.open('GET','https://h5.ele.me/restapi/bgs/poi/reverse_geo_coding?latitude='+param.latitude+'&longitude='+param.longitude,true);
-		request.onreadystatechange = function () {
-		  if(request.readyState === XMLHttpRequest.DONE && request.status === 200) {
-		  	resolve(JSON.parse(request.response))
-		  }else if(request.readyState === XMLHttpRequest.DONE && request.status != 200){
-		  	reject(arguments)
-		  }
+		var data={
+			location: param.latitude+','+param.longitude,
+			/*换成自己申请的key*/
+			key:"JWWBZ-DXPL6-GOUS2-EDNCS-LINR3-DEBU6",
+			get_poi:0    
 		}
-		request.send();
+		var url = document.location.protocol + "//apis.map.qq.com/ws/geocoder/v1/?";
+		data.output="jsonp";  
+		$.ajax({
+		    type:"get",
+		    dataType:'jsonp',
+		    data:data,
+		    jsonp:"callback",
+		    jsonpCallback:"getData",
+		    url:url,
+		    success:function(json){
+		        resolve(json.result);
+		    },error : function(err){
+		    	reject(err)
+		    }
+		})
 	})
 }
 export function getPosition(){
@@ -19,8 +30,8 @@ export function getPosition(){
 	      let latitude = position.coords.latitude
 	      let longitude = position.coords.longitude
 	      let data = {
-	        longitude: String(longitude).match(/\d+\.\d{0,6}/)[0],
-	        latitude: String(latitude).match(/\d+\.\d{0,6}/)[0],
+	        longitude: String(longitude).match(/\d+\.\d{0,7}/)[0],
+	        latitude: String(latitude).match(/\d+\.\d{0,7}/)[0],
 	        channelType: '00'
 	      }
 	      resolve(data)

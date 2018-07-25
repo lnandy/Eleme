@@ -47,13 +47,12 @@
 		     	detail: '正在定位中'
 		     }
 		},
-
 		mounted : function(){
 			var me = this;
 			proxy.getPosition().then(function(param){
 				me.detail = "正在识别中";
 				proxy.getLocation(param).then(function(location){
-					me.detail = location.name;
+					me.detail = location.address;
 				});
 			})
 		}
