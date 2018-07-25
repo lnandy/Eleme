@@ -1,7 +1,7 @@
 export function getLocation(param){
 	return new Promise((resolve,reject) => {
 		var request = new XMLHttpRequest();
-		request.open('GET','eleme/restapi/bgs/poi/reverse_geo_coding?latitude='+param.latitude+'&longitude='+param.longitude,true);
+		request.open('GET','https://h5.ele.me/restapi/bgs/poi/reverse_geo_coding?latitude='+param.latitude+'&longitude='+param.longitude,true);
 		request.onreadystatechange = function () {
 		  if(request.readyState === XMLHttpRequest.DONE && request.status === 200) {
 		  	resolve(JSON.parse(request.response))
