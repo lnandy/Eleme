@@ -4,13 +4,13 @@
 			<h3>品质套餐</h3>
 			<div class="description">搭配齐全吃得好</div>
 			<div>立即抢购 &gt;</div>
-			<img src="//fuss10.elemecdn.com/d/d4/16ff085900d62b8d60fa7e9c6b65dpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/">
+			<img src="https://fuss10.elemecdn.com/d/d4/16ff085900d62b8d60fa7e9c6b65dpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/">
 		</div>
 		<div class="right">
 			<h3>限量抢购</h3>
 			<div class="description">超值美味 9.9元起</div>
 			<div><span>27人</span>正在抢 &gt;</div>
-			<img src="//fuss10.elemecdn.com/b/e1/0fa0ed514c093a7138b0b9a50d61fpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/">
+			<img src="https://fuss10.elemecdn.com/b/e1/0fa0ed514c093a7138b0b9a50d61fpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/">
 		</div>
 	</div>
 </template>

@@ -50,10 +50,6 @@
 	.btn-con{
 		margin-top: 2.933333vw;
 		width: 20%;
-		/*display: flex;
-	    flex-direction: column;
-	    justify-content: center;
-	    align-items: center;*/
 	    position: relative;
 	    float: left;
 	}
@@ -62,6 +58,7 @@
 		display: inline-block;
 		width: 12vw;
 		height: 12vw;
+		background-repeat: no-repeat;
 	}
 	.title{
 		display: block;

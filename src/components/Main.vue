@@ -6,6 +6,8 @@
 		<Search class="searchCon"></Search>
 		<MenuCarousel class="MenuCarousel"></MenuCarousel>
 		<Banner></Banner>
+		<ShopList></ShopList>
+		<Footer></Footer>
 		<div id="shoplist-title" class="shoplist-title">推荐商家</div>
 		</div>
 	</div>
@@ -15,8 +17,11 @@
 	import Search from "@/components/Search"
 	import MenuCarousel from "@/components/MenuCarousel"
 	import Banner from "@/components/Banner"
+	import ShopList from "@/components/ShopList"
+	import Footer from "@/components/Footer"
+
 	export default {
-		components: {ReservationAddress,Search,MenuCarousel,Banner}
+		components: {ReservationAddress,Search,MenuCarousel,Banner,ShopList,Footer}
 	}
 </script>
 <style scoped>

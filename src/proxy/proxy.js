@@ -6,7 +6,7 @@ export function getLocation(param){
 			key:"JWWBZ-DXPL6-GOUS2-EDNCS-LINR3-DEBU6",
 			get_poi:0    
 		}
-		var url = document.location.protocol + "//apis.map.qq.com/ws/geocoder/v1/?";
+		var url = (document.location.protocol == "http:" ? 'http:' : 'https:') + "//apis.map.qq.com/ws/geocoder/v1/?";
 		data.output="jsonp";  
 		$.ajax({
 		    type:"get",

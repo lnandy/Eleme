@@ -14,7 +14,8 @@
 html,body{
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 #app {
   font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino Sans GB','Microsoft Yahei',sans-serif;
