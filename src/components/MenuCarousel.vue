@@ -2,7 +2,7 @@
 	<mt-swipe :auto="0">
 		<mt-swipe-item v-for="(data,index) in dataSource">
 			<div class="btn-con" v-for="(i,j) in data">
-				<div class="icon" :style="{backgroundImage:'url(' + i.iconSrc + ')'}"></div>
+				<div class="icon" :style="{'background-position':i.position}"></div>
 				<span class="title">{{i.title}}</span>
 			</div>
 		</mt-swipe-item>
@@ -50,6 +50,7 @@
 		background-repeat: no-repeat;
 		width: 90px;
 		height: 90px;
+		background-image: url("../img/image.png");
 	}
 	.title{
 		display: block;
