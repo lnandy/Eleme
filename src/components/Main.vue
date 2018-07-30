@@ -6,9 +6,9 @@
 		<Search class="searchCon"></Search>
 		<MenuCarousel class="MenuCarousel"></MenuCarousel>
 		<Banner></Banner>
+		<div id="shoplist-title" class="shoplist-title">推荐商家</div>
 		<ShopList></ShopList>
 		<Footer></Footer>
-		<div id="shoplist-title" class="shoplist-title">推荐商家</div>
 		</div>
 	</div>
 </template>

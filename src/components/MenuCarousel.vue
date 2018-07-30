@@ -1,15 +1,4 @@
 <template>
-		<!-- <div class="mint-swipe">
-			<div class="mint-swipe-items-wrap">
-				<div class="mint-swipe-item"  v-for="(data,index) in dataSource">
-					<div class="btn-con" v-for="(i,j) in data">
-						<div class="icon" :style="{backgroundImage:'url(' + i.iconSrc + ')'}"></div>
-						<span class="title">{{i.title}}</span>
-					</div>
-				</div> 
-			</div> 
-			<div class="mint-swipe-indicators"></div>
-		</div> -->
 	<mt-swipe :auto="0">
 		<mt-swipe-item v-for="(data,index) in dataSource">
 			<div class="btn-con" v-for="(i,j) in data">
@@ -44,7 +33,7 @@
 </script>
 <style>
 	.mint-swipe-indicator.is-active {
-	    background-color: #000;
+	    background-color: #000 !important;
 	    opacity: .6;
 	}
 	.btn-con{
@@ -59,6 +48,8 @@
 		width: 12vw;
 		height: 12vw;
 		background-repeat: no-repeat;
+		width: 90px;
+		height: 90px;
 	}
 	.title{
 		display: block;
