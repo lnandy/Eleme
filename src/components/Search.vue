@@ -1,5 +1,5 @@
 <template>
-	<div class="search-wrapper" style="position: -webkit-sticky; position: sticky; top: 0px; z-index: 999;">
+	<div class="search-wrapper">
 		<div role="button" class="search">
 			<a class="content">
 				<i class="el-icon-search"></i>
@@ -14,6 +14,12 @@
 	}
 </script>
 <style scoped>
+	.search-wrapper{
+		position: -webkit-sticky; 
+		position: sticky; 
+		top: 0px; 
+		z-index: 999;
+	}
 	.search{
 		padding: 2vw 3.733333vw;
 		margin: -.133333vw 0;
