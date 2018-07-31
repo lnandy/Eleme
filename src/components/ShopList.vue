@@ -21,6 +21,6 @@
 </script>
 <style scoped>
 	.container{
-		margin-bottom: 13.333333vw;
+		margin-bottom: 100px;
 	}
 </style>
