@@ -1,5 +1,5 @@
 <template>
-	<div class="search-wrapper" style="position: sticky; top: 0px; z-index: 999;">
+	<div class="search-wrapper" style="position: sticky; position: -webkit-sticky; top: 0px; z-index: 999;">
 		<div role="button" class="search">
 			<a class="content">
 				<i class="el-icon-search"></i>
