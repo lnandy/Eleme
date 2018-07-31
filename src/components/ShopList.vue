@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="container">
 		<div v-for="info in list" >
 			<ShopItem :info="info"></ShopItem>
 		</div>
@@ -20,5 +20,7 @@
 	}
 </script>
 <style scoped>
-	
+	.container{
+		margin-bottom: 13.333333vw;
+	}
 </style>

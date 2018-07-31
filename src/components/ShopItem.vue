@@ -1,7 +1,8 @@
 <template>
 	<section class="shop-item">
 		<div class="shop-simple-info">
-			<img :src="info.image_path">
+			<i :path="info.image_path" class="img" 
+			:style="{'background-position':shopImgPosition[info.image_path]}"></i>
 			<div>
 				<section>
 					<h3>{{info.name}}</h3>
@@ -57,8 +58,18 @@
 	</section>
 </template>
 <script>
+	import {shopImgPosition} from '@/data/menuCarouselData'
+	import {json} from '@/data/menuCarouselData'
 	export default{
-		props:['info']
+		props:['info'],
+		components:{shopImgPosition,json},
+		data () {
+			return {
+				shopImgPosition : shopImgPosition
+			}
+		},
+		mounted () {
+		}
 	}
 </script>
 <style scoped>
@@ -97,12 +108,13 @@
 		padding-left: 2.666667vw;
 		justify-content: space-between;
 	}
-	img{
+	.img{
 		position: relative;
 		width: 17.333333vw;
 		height: 17.333333vw;
 		border: .133333vw solid rgba(0,0,0,.08);
 		flex: none;
+		background-image: url('../img/image.png');
 	}
 	.shop-simple-info > div{
 		flex: 1;
