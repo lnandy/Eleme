@@ -24,10 +24,12 @@
 		},
 		mounted: function(){
 			var me = this;
-			while(json.length > 10){
-				me.dataSource.push(json.splice(0,10));
+			let temp = json;
+			console.error(json)
+			while(temp.length > 10){
+				me.dataSource.push(temp.splice(0,10));
 			}
-			me.dataSource.push(json);
+			me.dataSource.push(temp);
 		}
 	}
 </script>

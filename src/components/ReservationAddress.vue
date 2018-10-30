@@ -1,5 +1,5 @@
 <template>
-	<div class="container">
+	<div class="container" @click="search">
 		<div class="content">
 			<i class="el-icon-location"></i>
 			<span>{{detail}}</span>
@@ -42,15 +42,29 @@
 	export default {
 		data () {
 		     return {
-		     	detail: '正在定位中'
+		     	//detail: me.$store.getters['address/getAddress'],
+		     	status: 0//page hasn't load
 		     }
 		},
-		mounted : function(){
+		methods : {
+			search () {
+				this.$router.push('/SearchAddress')
+			}
+		},
+		computed:{
+			detail () {
+				return this.$store.getters['address/getAddress']
+			}
+		},
+		mounted (){
 			var me = this;
+			if(!me.$store.getters['address/getStatus']){
+				return;
+			}
 			proxy.getPosition().then(function(param){
-				me.detail = "正在识别中";
+				me.$store.dispatch('address/setAddress','正在识别中');
 				proxy.getLocation(param).then(function(location){
-					me.detail = location.address;
+					me.$store.dispatch('address/setAddress',location.address);
 				});
 			})
 		}

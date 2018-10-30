@@ -21,7 +21,10 @@
 	import Footer from "@/components/Footer"
 
 	export default {
-		components: {ReservationAddress,Search,MenuCarousel,Banner,ShopList,Footer}
+		components: {ReservationAddress,Search,MenuCarousel,Banner,ShopList,Footer},
+		mounted(){
+			
+		}
 	}
 </script>
 <style scoped>
